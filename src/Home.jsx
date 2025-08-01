@@ -21,18 +21,19 @@ if (isError) return <p>Something went wrong!</p>;
 
 return (
     <div className=''>
-    <ul>
+    <ul className='grid grid-cols-3 gap-4'>
         {data.results.map((pokemon) => (
-        <li key={pokemon.name}>
+        <li key={pokemon.name} className='col-span-1 underline'>
         <Link to={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link>
         </li>
     ))}
     </ul>
-    <div>
-    <button onClick={() => setPage((p) => Math.max(p - 1, 0))} disabled={page === 0}>Previous</button>
+    <div className='flex justify-between items-center gap-4'>
+    <button className='' onClick={() => setPage((p) => Math.max(p - 1, 0))} disabled={page === 0}>Previous</button>
     <span> Page {page + 1} </span>
     <button onClick={() => setPage((p) => p + 1)} disabled={!data.next}>Next</button>
     </div>
   </div>
  )
 }
+

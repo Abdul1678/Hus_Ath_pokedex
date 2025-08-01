@@ -19,9 +19,9 @@ export default function PokemonDetails() {
     if (isError) return <p>Something went wrong!</p>;
 
     return (
-    <div>
-        <h1>{data.name}</h1>
-        <img src={data.sprites.front_default} alt={data.name} />
+    <div className='shadow-lg p-10 px-30 rounded-lg'>
+        <p className='text-3xl font-medium '>{data.name}</p>
+        <img className='mx-auto h-50 w-50' src={data.sprites.front_default} alt={data.name} />
         <p>Height: {data.height}</p>
         <p>Weight: {data.weight}</p>
     </div>

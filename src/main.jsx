@@ -14,9 +14,8 @@ createRoot(document.getElementById('root')).render(
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
        <Routes>
-          
         <Route path="/" element={<Home />} />
-        { <Route path="/pokemon/:pokemonName" element={<PokemonDetails />} /> }
+        <Route path="/pokemon/:pokemonName" element={<PokemonDetails />} />
       </Routes>
      </BrowserRouter>
     </QueryClientProvider>
